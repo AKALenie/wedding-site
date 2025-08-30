@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 import HomeButton from "../components/HomeButton";
 
@@ -100,7 +101,7 @@ export default function DetailsPage() {
         <InfoBox>
           <p style={romanticP}>
             Children are warmly welcome. Please let us know on your{" "}
-            <a href="/rsvp" style={linkInline}>RSVP</a> so we can arrange the right number of trusted sitters to help throughout the evening.
+            <Link href="/rsvp" style={linkInline}>RSVP</Link> so we can arrange the right number of trusted sitters to help throughout the evening.
           </p>
         </InfoBox>
 
@@ -126,7 +127,7 @@ export default function DetailsPage() {
         <InfoBox>
           <p style={romanticP}>
             Kindly respond on our{" "}
-            <a href="/rsvp" style={linkInline}>RSVP</a> page. We can’t wait to celebrate with you in Perugia!
+            <Link href="/rsvp" style={linkInline}>RSVP</Link> page. We can’t wait to celebrate with you in Perugia!
           </p>
         </InfoBox>
       </div>
