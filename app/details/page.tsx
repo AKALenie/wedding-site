@@ -111,7 +111,7 @@ export default function DetailsPage() {
             Spring in Umbria is mild and sunny with cool evenings. Paths around the estate are stone and lawn—block heels recommended.
             Check the latest forecast here:{" "}
             <a
-              href="https://weather.com/weather/tenday/l/Perugia+Umbria+Italy"
+              href="https://weather.com/weather/tenday/l/5c2f3e71fc0899c9550e934455357922d15591d4d0618e0e9c50272fecd6a3ec"
               target="_blank"
               rel="noreferrer"
               style={linkInline}
