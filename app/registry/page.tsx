@@ -7,7 +7,7 @@ import HomeButton from "../components/HomeButton";
 export default function RegistryPage() {
 const router = useRouter();
 
-// Keep private behind login
+// Protect behind login
 useEffect(() => {
 const ok = localStorage.getItem("wed_authed") === "true";
 if (!ok) router.replace("/login");
@@ -22,9 +22,6 @@ overflow: "hidden",
 background: "transparent",
 }}
 >
-
-<HomeButton />
-
 {/* Background video */}
 <video
 autoPlay
@@ -45,26 +42,25 @@ filter: "saturate(0.85)",
 }}
 />
 
-{/* Vertical Title */}
-<aside id="regTitle">Registry</aside>
+<HomeButton />
 
-{/* Content */}
-<div id="regContent">
-{/* Intro */}
+{/* Vertical Title */}
+<aside id="registryTitle">Registry</aside>
+
+{/* Main Content */}
+<div id="registryContent">
 <SectionTitle>With Love & Thanks</SectionTitle>
 <InfoBox>
 <p style={romanticP}>
-Your presence is truly the greatest gift. For those who would like
-to celebrate with something extra, our registry will be live soon.
+Your presence is truly the greatest gift. For those who would like to
+celebrate with something extra, our registry will be live soon.
 </p>
 </InfoBox>
 
-{/* Registry Placeholder */}
 <SectionTitle>Our Registry</SectionTitle>
 <InfoBox>
 <p style={romanticP}>
-We’re putting the finishing touches on our list. Please check back
-soon!
+We’re putting the finishing touches on our list. Please check back soon!
 </p>
 </InfoBox>
 </div>
@@ -75,7 +71,7 @@ soon!
 --title-left: clamp(20px, 8vw, 110px);
 --content-ml: clamp(260px, 34vw, 520px);
 }
-#regTitle {
+#registryTitle {
 position: fixed;
 top: 50%;
 transform: translateY(-50%) rotate(180deg);
@@ -88,11 +84,11 @@ padding: 0 12px;
 white-space: nowrap;
 z-index: 2;
 user-select: none;
-pointerEvents: none;
+pointer-events: none;
 left: var(--title-left);
 font-size: clamp(44px, 10vw, 108px);
 }
-#regContent {
+#registryContent {
 position: relative;
 z-index: 1;
 margin-left: var(--content-ml);
@@ -103,17 +99,35 @@ display: grid;
 gap: 44px;
 }
 @media (max-width: 900px) {
-:root { --content-ml: min(44vw, 320px); }
-#regTitle { font-size: clamp(28px, 17vw, 58px); left: 0.5vw; }
-#regContent { width: calc(100vw - var(--content-ml) - 6px); }
+:root {
+--content-ml: min(18vw, 210px);
+--title-left: 8px;
+}
+#registryTitle {
+font-size: clamp(30px, 13vw, 64px);
+}
+#registryContent {
+width: calc(100vw - var(--content-ml) - 10px);
+}
+}
+@media (max-width: 600px) {
+:root {
+--content-ml: min(22vw, 175px);
+--title-left: 6px;
+}
+#registryTitle {
+font-size: clamp(28px, 17vw, 58px);
+}
+#registryContent {
+width: calc(100vw - var(--content-ml) - 6px);
+}
 }
 `}</style>
 </main>
 );
 }
 
-/* -------- Reusable components & styles -------- */
-
+/* Components & styles */
 function SectionTitle({ children }: { children: React.ReactNode }) {
 return (
 <h2
@@ -123,7 +137,6 @@ fontWeight: 700,
 fontSize: "clamp(31px, 4.9vw, 42px)",
 color: "#fff",
 margin: 0,
-paddingBottom: 0,
 textAlign: "left",
 textShadow: "0 3px 10px rgba(0,0,0,0.5)",
 width: "100%",
@@ -148,7 +161,6 @@ boxShadow: "0 6px 18px rgba(0,0,0,0.35)",
 padding: "18px 22px",
 backdropFilter: "blur(2px)",
 margin: "0 auto",
-marginTop: "-6px",
 }}
 >
 {children}
