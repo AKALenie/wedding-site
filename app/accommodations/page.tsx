@@ -68,10 +68,10 @@ assignments are as follows:
 </p>
 <ul style={listStyle}>
 <li><strong>Papavero (2 Bedrooms):</strong> Brantley, Marissa &amp; Sophia</li>
-<li><strong>Moro:</strong> Kenzie &amp; Tommy</li>
+<li><strong>Moro:</strong> Ksenia &amp; Tommy</li>
 <li><strong>Melograno:</strong> Haydn, Taylor &amp; Blake</li>
-<li><strong>Verbena:</strong> Gabs &amp; Carlos</li>
-<li><strong>Acero:</strong> Gabby &amp; Jack</li>
+<li><strong>Verbena:</strong> Gabby &amp; Carlos</li>
+<li><strong>Acero:</strong> Gabriela &amp; Jack</li>
 <li><strong>Tiglio:</strong> Jessie &amp; Cody</li>
 </ul>
 </InfoBox>
@@ -93,7 +93,7 @@ All guests in this group will be added to the reservation—no need to book sepa
 <li>Johnny &amp; Anna</li>
 <li>Jamie &amp; Dani</li>
 <li>Chris &amp; Laura</li>
-<li>Poon &amp; Joey</li>
+<li>Poon &amp; Jocey</li>
 </ul>
 
 <div style={{ marginTop: 12 }}>
